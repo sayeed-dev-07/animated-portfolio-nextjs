@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import Link from 'next/link';
 
 // Hamburger Component
@@ -34,7 +34,7 @@ function Hamburger({ menuItems = ['home', 'about', 'projects', 'contact'] }: Ham
                 ease: [0.43, 0.13, 0.23, 0.96]
               }
             }}
-            className="fixed bottom-8 right-3 w-12 h-12 rounded-full bg-accent-foreground origin-center z-40"
+            className="fixed bottom-8 right-3 w-12 h-12 rounded-full bg-foreground origin-center z-40"
             style={{ transformOrigin: 'center' }}
           />
         )}
@@ -120,7 +120,7 @@ function Hamburger({ menuItems = ['home', 'about', 'projects', 'contact'] }: Ham
           <motion.span
             animate={isOpen ? {
               rotate: -45,
-              y: -8
+              y: -9
             } : {
               rotate: 0,
               y: 0

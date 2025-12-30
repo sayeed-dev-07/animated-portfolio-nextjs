@@ -30,7 +30,7 @@ const Navbar = () => {
                     items.map((item, index) => (
                         <motion.div
                             key={index}
-                            className="relative capitalize px-3 py-2 rounded-md cursor-pointer"
+                            className="relative capitalize px-3 py-2 rounded-md"
                         >
                             {active === item && (
                                 <motion.div
@@ -45,7 +45,7 @@ const Navbar = () => {
                             )}
                             <Link
                                 href={`${item === 'home' ? '/' : item}`}
-                                className={`relative z-10 ${active === item ? 'text-accent' : ''}`}
+                                className={`relative cursor-pointer z-10 ${active === item ? 'text-accent' : ''}`}
                             >
                                 {item}
                             </Link>
