@@ -3,7 +3,7 @@ import { Fira_Sans_Condensed, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider"
-import Grid from "@/components/ui/grid";
+
 
 
 
