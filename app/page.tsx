@@ -1,5 +1,4 @@
 import SlideArrowButton from "@/components/ArrowButton";
-import SwapText from "@/components/Swaptext";
 import TextType from "@/components/TextType";
 import Link from "next/link";
 
