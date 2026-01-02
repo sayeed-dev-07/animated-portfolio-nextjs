@@ -5,6 +5,9 @@ import { IoLogoHtml5, IoLogoJavascript } from 'react-icons/io';
 import { FaCss3, FaGitAlt, FaGithub } from 'react-icons/fa';
 import { SiFramer, SiReactquery, SiRedux, SiTailwindcss, SiTypescript, SiVite } from 'react-icons/si';
 import { RiNextjsLine } from 'react-icons/ri';
+import ExperienceSection from '@/components/Experience';
+import ArrowButton from '@/components/ui/Download';
+import Link from 'next/link';
 
 
 const page = () => {
@@ -115,7 +118,15 @@ const page = () => {
                     </motion.svg>
                 </div>
             </div>
-            <div className='mt-3 md:mt-0'>
+            
+            <div className='md:my-24 my-6'>
+                <p className='uppercase text-3xl '>Experience</p>
+                <div className='overflow-hidden'>
+                    <ExperienceSection/>
+                </div>
+            </div>
+
+            <div className='md:my-12 my-3'>
                 <motion.p whileInView={animate} initial={initial} transition={{
                     duration: 0.5, type: "spring",
                     stiffness: 300,
@@ -190,8 +201,11 @@ const page = () => {
                 </motion.div>
 
             </div>
-            <div>
-                <p className='uppercase text-3xl '>Experience</p>
+            <div className='min-h-75 flex items-center justify-center flex-col gap-y-4'>
+                <p className='text-3xl'>Download My Resume</p>
+                <a target='_blank' href={'https://drive.google.com/file/d/1QGdXt2LNQyYeninZln0iZpIi1SFNVw50/view'}>
+                <ArrowButton text='Resume' />
+                </a>
             </div>
         </div>
     );
