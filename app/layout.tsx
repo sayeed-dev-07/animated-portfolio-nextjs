@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Fira_Sans_Condensed, Outfit } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider"
+import Navbar from "@/components/Navbar";
 
 
 
@@ -39,17 +39,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-
-
-          <div className="h-24  border-b-2 drop-shadow-border">
-            <div className="max-w-350 h-full w-full mx-auto">
-              <Navbar />
+          <div>
+                <div className="h-24  border-b-2 drop-shadow-border">
+                    <div className="max-w-350 h-full w-full mx-auto">
+                        <Navbar />
+                    </div>
+                </div>
+                <div className="h-[calc(100vh-6rem)] max-w-350 mx-auto ">
+                    {children}
+                </div>
             </div>
-          </div>
-          <div className="h-[calc(100vh-6rem)] max-w-350 mx-auto ">
-            {children}
-          </div>
-
         </ThemeProvider>
       </body>
     </html>

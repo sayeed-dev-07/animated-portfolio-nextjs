@@ -6,6 +6,7 @@ import { FaCss3, FaGitAlt, FaGithub } from 'react-icons/fa';
 import { SiFramer, SiReactquery, SiRedux, SiTailwindcss, SiTypescript, SiVite } from 'react-icons/si';
 import { RiNextjsLine } from 'react-icons/ri';
 
+
 const page = () => {
     const animate = {
         opacity: 1, x: 0, filter: 'blur(0px)'
@@ -42,7 +43,7 @@ const page = () => {
 
     return (
         <div className='px-3'>
-            <div className='min-h-screen'>
+            <div className='flex items-center justify-center flex-col'>
                 <div className='flex items-center justify-center  flex-col md:flex-row t gap-x-6 gap-y-6 md:mt-16 mt-3'>
                     <div className='md:w-[50%] w-full'>
                         <div className='flex flex-col gap-y-8'>
@@ -95,11 +96,12 @@ const page = () => {
                         stiffness: 300,
                         damping: 20,
                     }} >
-                        <Image className='rounded-xl drop-shadow-2xl' height={400} width={350} loading='lazy' src='/me.png' alt='me' />
+                        <Image className='rounded-xl drop-shadow-accent-foreground/20 drop-shadow-xl' height={400} width={350} loading='lazy' src='/me.png' alt='me' />
                     </motion.div>
                 </div>
                 <div className='flex  items-center justify-center w-full mt-12'>
-                    <motion.svg animate={{ y: [0, 12, 0] }}
+                   
+                         <motion.svg animate={{ y: [0, 12, 0] }}
                         transition={{
                             duration: 1.2,
                             ease: "easeInOut",
@@ -119,7 +121,7 @@ const page = () => {
                     stiffness: 300,
                     damping: 20,
                 }} className='uppercase text-3xl'>Skills</motion.p>
-                <motion.div variants={parentVariants} initial='hidden' whileInView='show' className="flex my-6 font-semibold items-center justify-start gap-4 flex-wrap">
+                <motion.div id='experience' variants={parentVariants} initial='hidden' whileInView='show' className="flex my-6 font-semibold items-center justify-start gap-4 flex-wrap">
                     <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <IoLogoHtml5 size={24} />
                         <p>HTML5</p>

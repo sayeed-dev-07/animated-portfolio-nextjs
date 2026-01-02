@@ -17,7 +17,7 @@ const HoverText: React.FC<UnderlineHoverTextProps> = ({
   text,
   textColor = "text-[#0a0a0a] dark:text-white",
   hoverTextColor = "hover:text-accent",
-  hoverColor = "hover:after:bg-indigo-400",
+  hoverColor = "hover:after:bg-[#4a6f8a]",
   fontSize = "text-2xl",
   fontWeight = "font-medium",
   className,
