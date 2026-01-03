@@ -1,5 +1,6 @@
-import Link from 'next/link';
+
 import React from 'react';
+import SwipeButton from './animatedButon';
 
 const linkAdd = '&controls=false&autoplay=true&muted=true&loop=true'
 export interface dataProp {
@@ -37,8 +38,13 @@ const Card = ({ data, index, total }: { data: dataProp, index: number, total: nu
                         </div>
                     </div>
                     <div className='w-full flex items-center justify-between'>
-                        <a className='border-foreground border-2 px-3 py-1.5 rounded-lg' target='_blank' href={`${data.live}`}>Live</a>
-                        <a className='border-foreground border-2 px-3 py-1.5 rounded-lg' target='_blank' href={`${data.code}`}>Code</a>
+
+                        <a className='cursor-pointer' target='_blank' href={`${data.live}`}>
+                            <SwipeButton className='cursor-pointer' firstText='Live' secondText='Live' />
+                        </a>
+                        <a className='cursor-pointer' target='_blank' href={`${data.code}`}>
+                            <SwipeButton className='cursor-pointer' firstText='Code' firstClass='bg-foreground text-background' secondClass='bg-background text-foreground' secondText='Code' />
+                        </a>
                     </div>
                 </div>
             </div>

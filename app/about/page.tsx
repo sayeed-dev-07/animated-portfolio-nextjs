@@ -7,7 +7,7 @@ import { SiFramer, SiReactquery, SiRedux, SiTailwindcss, SiTypescript, SiVite } 
 import { RiNextjsLine } from 'react-icons/ri';
 import ExperienceSection from '@/components/Experience';
 import ArrowButton from '@/components/ui/Download';
-import Link from 'next/link';
+
 
 
 const page = () => {
@@ -127,74 +127,74 @@ const page = () => {
             </div>
 
             <div className='md:my-12 my-3 '>
-                <motion.p  whileInView={animate} initial={initial} transition={{
+                <motion.p viewport={{once: true}}  whileInView={animate} initial={initial} transition={{
                     duration: 0.5, type: "spring",
                     stiffness: 300,
                     damping: 20,
                 }} className='uppercase text-3xl'>Skills</motion.p>
                 <motion.div id='experience' variants={parentVariants} initial='hidden' whileInView='show' className="flex my-6 font-semibold items-center justify-start gap-4 flex-wrap">
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <IoLogoHtml5 size={24} />
                         <p>HTML5</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <FaCss3 size={24} />
                         <p>CSS</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <SiTailwindcss size={24} />
                         <p>Tailwind CSS</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <IoLogoJavascript size={24} />
                         <p>JavaScript</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <SiTypescript size={24} />
                         <p>TypeScript</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <SiVite size={24} />
                         <p>Vite</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <RiNextjsLine size={24} />
                         <p>Next.js</p>
                     </motion.div>
 
                     {/* New additions */}
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <SiFramer size={24} />
                         <p>Framer Motion</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <SiReactquery size={24} />
                         <p>TanStack Query</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <p>Zustand</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <SiRedux size={24} />
                         <p>Redux</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <FaGitAlt size={24} />
                         <p>Git</p>
                     </motion.div>
 
-                    <motion.div variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
+                    <motion.div viewport={{once: true}} variants={childVariants} className="flex items-center justify-center gap-x-1.5 px-4 py-1.5 bg-accent-foreground text-accent rounded-md">
                         <FaGithub size={24} />
                         <p>GitHub</p>
                     </motion.div>
