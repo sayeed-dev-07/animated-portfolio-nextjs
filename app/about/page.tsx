@@ -45,9 +45,9 @@ const page = () => {
 
 
     return (
-        <div className='px-3'>
+        <div className='px-3 max-w-350 mx-auto'>
             <div className='flex items-center justify-center flex-col'>
-                <div className='flex items-center justify-center  flex-col md:flex-row t gap-x-6 gap-y-6 md:mt-16 mt-3'>
+                <div className='flex  items-center justify-between  flex-col md:flex-row t gap-x-6 gap-y-6 md:mt-16 mt-3'>
                     <div className='md:w-[50%] w-full'>
                         <div className='flex flex-col gap-y-8'>
                             <motion.p initial={initial} animate={animate} transition={{
@@ -119,15 +119,15 @@ const page = () => {
                 </div>
             </div>
             
-            <div className='md:my-24 my-6'>
+            <div className='md:my-24 my-6 '>
                 <p className='uppercase text-3xl '>Experience</p>
                 <div className='overflow-hidden'>
                     <ExperienceSection/>
                 </div>
             </div>
 
-            <div className='md:my-12 my-3'>
-                <motion.p whileInView={animate} initial={initial} transition={{
+            <div className='md:my-12 my-3 '>
+                <motion.p  whileInView={animate} initial={initial} transition={{
                     duration: 0.5, type: "spring",
                     stiffness: 300,
                     damping: 20,
@@ -201,7 +201,7 @@ const page = () => {
                 </motion.div>
 
             </div>
-            <div className='min-h-75 flex items-center justify-center flex-col gap-y-4'>
+            <div className='min-h-75  flex items-center justify-center flex-col gap-y-4'>
                 <p className='text-3xl'>Download My Resume</p>
                 <a target='_blank' href={'https://drive.google.com/file/d/1QGdXt2LNQyYeninZln0iZpIi1SFNVw50/view'}>
                 <ArrowButton text='Resume' />

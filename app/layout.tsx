@@ -45,7 +45,7 @@ export default function RootLayout({
                         <Navbar />
                     </div>
                 </div>
-                <div className="h-[calc(100vh-6rem)] max-w-350 mx-auto ">
+                <div className="h-[calc(100vh-6rem)]  mx-auto">
                     {children}
                 </div>
             </div>
