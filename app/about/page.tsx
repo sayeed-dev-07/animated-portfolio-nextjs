@@ -46,7 +46,7 @@ const page = () => {
 
     return (
         <div className='px-3 max-w-350 mx-auto'>
-            <div className='flex items-center justify-center flex-col'>
+            <div className='flex items-center  justify-center flex-col'>
                 <div className='flex  items-center justify-between  flex-col md:flex-row t gap-x-6 gap-y-6 md:mt-16 mt-3'>
                     <div className='md:w-[50%] w-full'>
                         <div className='flex flex-col gap-y-8'>
