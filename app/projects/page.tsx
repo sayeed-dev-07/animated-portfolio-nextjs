@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 'use client'
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'motion/react'
@@ -5,7 +6,7 @@ import dataProject from '@/public/data'
 import Card from '@/components/Card'
 import SlideArrowButton from '@/components/ArrowButton'
 import Link from 'next/link'
-import { div } from 'motion/react-client'
+
 
 const Page = () => {
   const ref = useRef<HTMLDivElement | null>(null)
@@ -56,7 +57,7 @@ const Page = () => {
         </div>
 
         {/* ───────── STACKED CARDS ───────── */}
-        <div className="sticky top-0 h-screen overflow-hidden relative">
+        <div className="sticky top-0 h-screen overflow-hidden">
 
           {dataProject.map((project, index) => {
             /**
@@ -69,6 +70,7 @@ const Page = () => {
             const y =
               index === 0
                 ? '0%'
+                
                 : useTransform(
                     scrollYProgress,
                     [start, end],

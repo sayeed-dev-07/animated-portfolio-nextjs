@@ -74,11 +74,11 @@ const Card = ({
           </div>
 
           <div className="w-full flex items-center justify-between pt-4">
-            <a target="_blank" href={data.live}>
+            <a target="_blank"  href={data.live}>
               <SwipeButton firstText="Live" secondText="Live" />
             </a>
 
-            <a target="_blank" href={data.code}>
+            <a target="_blank"  href={data.code}>
               <SwipeButton
                 firstText="Code"
                 secondText="Code"

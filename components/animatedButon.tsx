@@ -19,11 +19,11 @@ export default function SwipeButton({
   secondClass = "bg-foreground text-background",
   ...props
 }: SwipeButtonProps) {
-  const common = "block px-4 py-2   text-2xl font-bold duration-300 ease-in-out";
+  const common = "block px-4 py-2  text-2xl font-bold duration-300 ease-in-out";
   return (
     <button
       {...props}
-      className={cn("group relative min-w-fit overflow-hidden rounded-md", className)}
+      className={cn("group relative min-w-fit overflow-hidden cursor-pointer border-2 border-foreground rounded-md", className)}
     >
       <span
         className={cn(
