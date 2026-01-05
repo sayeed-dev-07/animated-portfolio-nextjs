@@ -203,7 +203,7 @@ const page = () => {
             </div>
             <div className='min-h-75  flex items-center justify-center flex-col gap-y-4'>
                 <p className='text-3xl'>Download My Resume</p>
-                <a target='_blank' href={'https://drive.google.com/file/d/1QGdXt2LNQyYeninZln0iZpIi1SFNVw50/view'}>
+                <a target='_blank' href={'https://drive.google.com/file/d/1Hu4Nt1tRpnXDhPF5JAxkiaHLRl8CC1uw/view?usp=sharing'}>
                 <ArrowButton text='Resume' />
                 </a>
             </div>
