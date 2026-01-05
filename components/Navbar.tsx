@@ -2,11 +2,10 @@
 import { motion } from "motion/react"
 import { usePathname } from 'next/navigation'
 import Link from "next/link";
-import HoverText from "./ui/HoverText";
+
 import ThemeToggle from "./toggle";
 import Hamburger from "./ui/Hamburger";
-import Image from "next/image";
-;
+
 
 
 
