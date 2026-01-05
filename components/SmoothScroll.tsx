@@ -1,30 +1,42 @@
-'use client'
+"use client";
 
-import { ReactNode, useEffect } from 'react'
-import Lenis from 'lenis'
+import { ReactNode, useEffect, useRef } from "react";
+import { ReactLenis } from "lenis/react";
+import type { LenisRef } from "lenis/react";
+import { frame, cancelFrame } from "motion/react";
 
-export default function LenisProvider({ children }: { children: ReactNode }) {
+export default function LenisProvider({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  const lenisRef = useRef<LenisRef>(null);
+
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    })
-
-    function raf(time: number) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+    function update(data: { timestamp: number }) {
+      lenisRef.current?.lenis?.raf(data.timestamp);
     }
 
-    requestAnimationFrame(raf)
+    frame.update(update, true);
 
     return () => {
-      lenis.destroy()
-    }
-  }, [])
+      cancelFrame(update);
+    };
+  }, []);
 
-  return <>{children}</>
+  return (
+    <ReactLenis
+      root
+      ref={lenisRef}
+      options={{
+        autoRaf: false,
+        duration: 1.2,
+        easing: (t: number) =>
+          Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true
+      }}
+    >
+      {children}
+    </ReactLenis>
+  );
 }

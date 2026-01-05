@@ -1,5 +1,6 @@
 import React from 'react'
 import SwipeButton from './animatedButon'
+import HoverFillButton from './SwapButton'
 
 const linkAdd = '&controls=false&autoplay=true&muted=true&loop=true'
 
@@ -42,7 +43,7 @@ const Card = ({
         ${isLast ? 'rounded-br-lg border-none' : ''}
       `}
     >
-      <div className="max-w-6xl mx-auto group flex flex-col lg:flex-row items-center justify-between gap-x-12 gap-y-6">
+      <div className="max-w-6xl mx-auto  flex flex-col lg:flex-row items-center justify-between gap-x-12 gap-y-6">
 
         {/* VIDEO */}
         <div className="lg:flex-1 w-full">
@@ -50,9 +51,7 @@ const Card = ({
             src={`${data.img}${linkAdd}`}
             className="
               w-full aspect-video rounded-lg
-              grayscale-75 group-hover:grayscale-0
-              group-hover:scale-105
-              transition-all duration-300 ease-out
+              
               drop-shadow-accent-foreground
             "
             allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
@@ -75,16 +74,11 @@ const Card = ({
 
           <div className="w-full flex items-center justify-between pt-4">
             <a target="_blank"  href={data.live}>
-              <SwipeButton firstText="Live" secondText="Live" />
+              <HoverFillButton label='Live'/>
             </a>
 
             <a target="_blank"  href={data.code}>
-              <SwipeButton
-                firstText="Code"
-                secondText="Code"
-                firstClass="bg-foreground text-background"
-                secondClass="bg-background text-foreground"
-              />
+              <HoverFillButton label='Code'/>
             </a>
           </div>
         </div>
